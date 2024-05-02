@@ -9,5 +9,21 @@ export const routes: Routes = [
             name: "Enum Flag Converter",
             uri: "https://huntertran.github.io/enum-flag-converter/"
         }
+    },
+    {
+        path: "guid-generator",
+        component: DynamicIframeComponent,
+        data: {
+            name: "GUID Generator",
+            uri: "https://huntertran.github.io/guid-generator/"
+        }
+    },
+    {
+        path: "password-generator",
+        component: DynamicIframeComponent,
+        data: {
+            name: "Password Generator",
+            uri: "https://huntertran.github.io/password-generator/"
+        }
     }
 ];
