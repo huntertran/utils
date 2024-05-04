@@ -7,6 +7,7 @@ export const routes: Routes = [
         component: DynamicIframeComponent,
         data: {
             name: "Enum Flag Converter",
+            icon: "flag",
             uri: "https://huntertran.github.io/enum-flag-converter/"
         }
     },
@@ -15,6 +16,7 @@ export const routes: Routes = [
         component: DynamicIframeComponent,
         data: {
             name: "GUID Generator",
+            icon: "fingerprint",
             uri: "https://huntertran.github.io/guid-generator/"
         }
     },
@@ -23,6 +25,7 @@ export const routes: Routes = [
         component: DynamicIframeComponent,
         data: {
             name: "Password Generator",
+            icon: "lock",
             uri: "https://huntertran.github.io/password-generator/"
         }
     }
