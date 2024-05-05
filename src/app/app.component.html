@@ -12,19 +12,17 @@
                      [mode]="isMobile ? 'over' : 'side'"
                      [opened]="isMobile ? 'false' : 'true'">
             <mat-nav-list>
-                <ng-container *ngFor="let route of router.config">
-                    <a mat-list-item
-                       [routerLink]="route.path">
-                        <span class="entry">
-                            <mat-icon>{{ route.data?.['icon'] }}</mat-icon>
-                            <span *ngIf="!isCollapsed">{{ route.data?.['name'] }}</span>
-                        </span>
-                    </a>
-                </ng-container>
+                @for (route of router.config; track route) {
+                <mat-list-item [routerLink]="route.path">
+                    <mat-icon matListItemIcon>{{ route.data?.['icon'] }}</mat-icon>
+                    <h3 *ngIf="!isCollapsed"
+                        matListItemTitle>{{ route.data?.['name'] }}</h3>
+                </mat-list-item>
+                }
             </mat-nav-list>
         </mat-sidenav>
         <mat-sidenav-content>
-            <h2>{{applicationName}}</h2>
+            <h2 class="application-name">{{applicationName}}</h2>
             <div class="iframe-row">
                 <router-outlet (activate)="onActivate($event)"></router-outlet>
             </div>

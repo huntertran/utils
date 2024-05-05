@@ -2,8 +2,8 @@ h1 {
     padding: 0 1rem;
 }
 
-h2 {
-    padding: 1rem;
+.application-name {
+    margin: 4px 8px;
 }
 
 .flex-container {
@@ -18,12 +18,7 @@ mat-sidenav-container {
 
 // Move the content down so that it won't be hidden by the toolbar
 mat-sidenav {
-    // padding-top: 3.5rem;
     transition: width 0.3s ease;
-
-    // @media screen and (min-width: 600px) {
-    //     padding-top: 4rem;
-    // }
 
     .entry {
         display: flex;
@@ -46,9 +41,11 @@ mat-sidenav-content {
     }
 }
 
-.entry {
+mat-list-item {
+    padding-right: 0;
+
     mat-icon {
-        width: 24px !important;
+        margin-right: 16px;
     }
 }
 

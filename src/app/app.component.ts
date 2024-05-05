@@ -5,7 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { ActivatedRoute, Router, RouterModule, Routes } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -37,7 +37,6 @@ export class AppComponent {
         private observer: BreakpointObserver) { }
 
     ngOnInit() {
-        console.log(this.router.config);
         this.route.firstChild?.data.subscribe(
             data => {
                 this.applicationName = data['name'];
